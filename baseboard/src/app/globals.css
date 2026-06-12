@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+/* 003-디자인시스템.md의 토큰을 그대로 매핑. 화면에선 이 이름으로만 색을 쓴다. */
+@theme {
+  --color-soft: #f7f7f8;
+  --color-ink: #171719;
+  --color-sub: #5a5c63;
+  --color-faint: #9ea0a7;
+  --color-disabled: #c9cbd1;
+  --color-line: #e1e2e4;
+  --color-line-soft: #f0f0f2;
+  --color-point: #ff5a36;
+  --color-point-soft: #ffede8;
+  --color-positive: #00bf40;
+  --color-negative: #ff4242;
+  --font-sans: "Pretendard Variable", Pretendard, -apple-system, sans-serif;
+}
+
+html,
+body {
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  background: var(--color-soft);
+}
+
+/* 바텀시트가 아래에서 올라오는 모션 */
+@keyframes sheet-up {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.sheet-up {
+  animation: sheet-up 0.22s ease-out;
+}
